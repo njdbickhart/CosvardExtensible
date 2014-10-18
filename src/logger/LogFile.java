@@ -10,5 +10,5 @@ package logger;
  * @author bickhart
  */
 public class LogFile {
-    
+    private final Path logpath
 }

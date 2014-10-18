@@ -10,5 +10,13 @@ package RunParams;
  * @author bickhart
  */
 public abstract class NameSpace {
+    public final String ID;
+    public final String LIB;
+    public final String SAMPLE;
     
+    public NameSpace(String ID, String LIB, String SAMPLE){
+        this.ID = ID;
+        this.LIB = LIB;
+        this.SAMPLE = SAMPLE;
+    }
 }
