@@ -5,6 +5,8 @@
  */
 package RunParams;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author bickhart
@@ -13,10 +15,15 @@ public abstract class NameSpace {
     public final String ID;
     public final String LIB;
     public final String SAMPLE;
+    public final ArrayList<String> INFO;
     
-    public NameSpace(String ID, String LIB, String SAMPLE){
-        this.ID = ID;
-        this.LIB = LIB;
-        this.SAMPLE = SAMPLE;
+    public NameSpace(String[] a){
+        this.ID = a[0];
+        this.LIB = a[1];
+        this.SAMPLE = a[2];
+        this.INFO = new ArrayList<>();
+        for(int x = 3; x < a.length; x++){
+            this.INFO.add(a[x]);
+        }
     }
 }
