@@ -16,7 +16,9 @@ import java.util.logging.Logger;
  *
  * @author desktop
  */
-public abstract class Command implements Callable<String>{
+public class Command implements Callable<String>{
+    
+    
     
     protected Thread StreamDepleter(Process p){
         return new Thread(() ->{
@@ -57,5 +59,10 @@ public abstract class Command implements Callable<String>{
             }
             
         });
+    }
+
+    @Override
+    public String call() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
