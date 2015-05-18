@@ -15,10 +15,10 @@ import logger.LogFile;
  * @author bickhart
  */
 public abstract class CosvardModule {
-    private final NameSpace[] input;
-    private NameSpace output;
-    private final ExecPaths paths;
-    private final LogFile logger;
+    protected final NameSpace[] input;
+    protected NameSpace output;
+    protected final ExecPaths paths;
+    protected final LogFile logger;
     
     public CosvardModule(ExecPaths paths, LogFile logger, NameSpace input){
         this.paths = paths;
